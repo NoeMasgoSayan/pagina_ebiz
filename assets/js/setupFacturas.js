@@ -23,13 +23,13 @@ export const setupFacturas = () => {
         <p>empresa: ${data.empresa}</p>
         <p>factura #${data.numero}</p>
         <p>monto ${data.monto}</p>
-        <button class="financiamiento" data-id="${facturaId}">solicitar financiamiento</button>
+        <button class="financiamiento" data-id="${facturaId}">Solicitar cotización</button>
           <div class="opciones">
-            <h3>opciones de financiamiento</h3>
-            <p>opciones</p>
-            <button class="opcion" data-id="${facturaId}" data-opcion="A">A</button>
-            <button class="opcion" data-id="${facturaId}" data-opcion="B">B</button>
-            <button class="opcion" data-id="${facturaId}" data-opcion="C">C</button>
+            <h5>Opciones de financiamiento</h5>
+            <p>Selecciona una oferta:</p>
+            <button class="opcion" data-id="${facturaId}" data-opcion="A">Banco A - 5% Interés</button>
+            <button class="opcion" data-id="${facturaId}" data-opcion="B">Banco B - 6% Interés</button>
+            <button class="opcion" data-id="${facturaId}" data-opcion="C">Banco C - 10% Interés</button>
           </div>
       </article>
       `;
@@ -80,7 +80,7 @@ export const setupFacturas = () => {
             let historialHtml = "";
             historialHtml += `
             <article class="transacciones">
-              <p>Factura #${facturaSeleccionada.data.numero} aprobada por banco con opción ${btn.dataset.opcion}</p>
+              <p>Factura #${facturaSeleccionada.data.numero} aprobada por banco ${btn.dataset.opcion}</p>
             </article>
             `;
             historialContainer.innerHTML += historialHtml;

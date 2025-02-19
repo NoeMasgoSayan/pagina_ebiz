@@ -1,3 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .opciones {
   display: none;
+}
+
+/* Página de facturas */
+#main-container {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.contenedor1,
+.contenedor2 {
+  width: 50%;
+}
+
+#facturas-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#historial-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.factura-container {
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+.transacciones {
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+/* Botones */
+.financiamiento,
+.opcion {
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 5px 7px;
+}
+
+.opciones {
+  margin-top: 10px;
 }

@@ -12,8 +12,8 @@ export const checkLogin = (user) => {
     loggedOut.forEach((element) => (element.style.display = "none"));
 
     // Mostramos el main container
-    mainContainer.style.display = "block";
-    saludo.textContent = `Bienvenid@ ${user.email}`;
+    mainContainer.style.display = "flex";
+    /*saludo.textContent = `Bienvenid@ ${user.email}`;*/
     setupFacturas();
   } else {
     loggedOut.forEach((element) => (element.style.display = "block"));
