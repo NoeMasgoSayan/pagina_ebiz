@@ -1,0 +1,7 @@
+.btn a{
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s; 
+}
