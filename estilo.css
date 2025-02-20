@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(84, 84, 238);
+    background-color: white;
     color: black;
 }
 
@@ -10,3 +10,10 @@ body{
     text-align: center;
 }
 
+.boton a{
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
