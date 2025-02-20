@@ -1,144 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="estil.css" />
-    <title>eBIZ</title>
-    <!-- Bootstrap Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
-    <!-- Bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <!-- Toastify JS -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
-    />
-    <!-- CSS Perfil -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <!-- JavaScript -->
-    <script type="module" src="./assets/js/script.js"></script>
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid px-4">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item logged-out">
-                <a
-                  class="nav-link"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#signin-modal"
-                  >Iniciar Sesión</a
-                >
-              </li>
-              <li class="nav-item logged-out">
-                <a
-                  class="nav-link"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#signup-modal"
-                  >Registrarse</a
-                >
-              </li>
-              <li class="nav-item logged-in">
-                <a class="nav-link" id="logout" href="#">Cerrar Sesión</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
 
-    <main id="main-container">
-      <!--<p id="saludo">Bienvenido noelia</p>-->
-      <section class="contenedor1">
-        <!-- Contenedor donde estas todas las facturas -->
-        <h3>Facturas disponibles</h3>
-        <div id="facturas-container">
-          <!-- Contenedor de cada factura -->
-          <article class="factura-container">
-            <p>Empresa: qwer</p>
-            <p>Factura: 001</p>
-            <p>Monto: $1000</p>
-            <button class="financiamiento">Solicitar cotización</button>
-            <div class="opciones">
-              <h3>Opciones de financiamiento</h3>
-              <p>Selecciona una oferta:</p>
-              <button class="option">Banco A - 5% Interés</button>
-              <button class="option">Banco B - 6% Interés</button>
-              <button class="option">Banco C - 10% Interés</button>
-            </div>
-          </article>
-          <article class="factura-container">
-            <p>Empresa: qwer</p>
-            <p>Factura: 001</p>
-            <p>Monto: $1000</p>
-            <button id="financiamiento">Solicitar cotización</button>
-            <div class="opciones">
-              <h3>Opciones de financiamiento</h3>
-              <p>Selecciona una oferta:</p>
-              <button class="option">Banco A - 5% Interés</button>
-              <button class="option">Banco B - 6% Interés</button>
-              <button class="option">Banco C - 10% Interés</button>
-            </div>
-          </article>
-          <article class="factura-container">
-            <p>Empresa: qwer</p>
-            <p>Factura: 001</p>
-            <p>Monto: $1000</p>
-            <button id="financiamiento">Solicitar cotización</button>
-            <div class="opciones">
-              <h3>Opciones de financiamiento</h3>
-              <p>Selecciona una oferta:</p>
-              <button class="option">Banco A - 5% Interés</button>
-              <button class="option">Banco B - 6% Interés</button>
-              <button class="option">Banco C - 10% Interés</button>
-            </div>
-          </article>
-          <article class="factura-container">
-            <p>Empresa: qwer</p>
-            <p>Factura: 001</p>
-            <p>Monto: $1000</p>
-            <button id="financiamiento">Solicitar cotización</button>
-            <div class="opciones">
-              <h3>Opciones de financiamiento</h3>
-              <p>Selecciona una oferta:</p>
-              <button class="option">Banco A - 5% Interés</button>
-              <button class="option">Banco B - 6% Interés</button>
-              <button class="option">Banco C - 10% Interés</button>
-            </div>
-          </article>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="estil.css" />
+  <title>eBIZ</title>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <!-- Toastify JS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+  <!-- CSS Perfil -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- JavaScript -->
+  <script type="module" src="./assets/js/script.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid px-4">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item logged-out">
+              <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signin-modal">Iniciar Sesión</a>
+            </li>
+            <li class="nav-item logged-out">
+              <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal">Registrarse</a>
+            </li>
+            <li class="nav-item logged-in">
+              <a class="nav-link" id="logout" href="#">Cerrar Sesión</a>
+            </li>
+          </ul>
         </div>
-      </section>
-      <section class="contenedor2">
-        <!-- Contenedor donde esta el historial de las facturas -->
-        <h3>Historial de transacciones</h3>
-        <div id="historial-container">
-          <!-- Contenedor de cada factura -->
-          <!--
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-container">
+    <!--<p id="saludo">Bienvenido noelia</p>-->
+    <section class="contenedor1">
+      <!-- Contenedor donde estas todas las facturas -->
+      <h3>Facturas disponibles</h3>
+      <div id="facturas-container">
+        <!-- Contenedor de cada factura -->
+        <article class="factura-container">
+          <p>Empresa: qwer</p>
+          <p>Factura: 001</p>
+          <p>Monto: $1000</p>
+          <button class="financiamiento">Solicitar cotización</button>
+          <div class="opciones">
+            <h3>Opciones de financiamiento</h3>
+            <p>Selecciona una oferta:</p>
+            <button class="option">Banco A - 5% Interés</button>
+            <button class="option">Banco B - 6% Interés</button>
+            <button class="option">Banco C - 10% Interés</button>
+          </div>
+        </article>
+        <article class="factura-container">
+          <p>Empresa: qwer</p>
+          <p>Factura: 001</p>
+          <p>Monto: $1000</p>
+          <button id="financiamiento">Solicitar cotización</button>
+          <div class="opciones">
+            <h3>Opciones de financiamiento</h3>
+            <p>Selecciona una oferta:</p>
+            <button class="option">Banco A - 5% Interés</button>
+            <button class="option">Banco B - 6% Interés</button>
+            <button class="option">Banco C - 10% Interés</button>
+          </div>
+        </article>
+        <article class="factura-container">
+          <p>Empresa: qwer</p>
+          <p>Factura: 001</p>
+          <p>Monto: $1000</p>
+          <button id="financiamiento">Solicitar cotización</button>
+          <div class="opciones">
+            <h3>Opciones de financiamiento</h3>
+            <p>Selecciona una oferta:</p>
+            <button class="option">Banco A - 5% Interés</button>
+            <button class="option">Banco B - 6% Interés</button>
+            <button class="option">Banco C - 10% Interés</button>
+          </div>
+        </article>
+        <article class="factura-container">
+          <p>Empresa: qwer</p>
+          <p>Factura: 001</p>
+          <p>Monto: $1000</p>
+          <button id="financiamiento">Solicitar cotización</button>
+          <div class="opciones">
+            <h3>Opciones de financiamiento</h3>
+            <p>Selecciona una oferta:</p>
+            <button class="option">Banco A - 5% Interés</button>
+            <button class="option">Banco B - 6% Interés</button>
+            <button class="option">Banco C - 10% Interés</button>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="contenedor2">
+      <!-- Contenedor donde esta el historial de las facturas -->
+      <h3>Historial de transacciones</h3>
+      <div id="historial-container">
+        <!-- Contenedor de cada factura -->
+        <!--
           <article class="transacciones">
             <p>Factura #001 aprobada por Banco A</p>
           </article>
@@ -149,151 +121,98 @@
             <p>Factura #001 aprobada por Banco A</p>
           </article>
           -->
+      </div>
+    </section>
+  </main>
+  <!-- Modal Inicio Sesión-->
+  <div class="modal fade" id="signin-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="exampleModalLabel">
+            Iniciar sesión
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-      </section>
-    </main>
-    <!-- Modal Inicio Sesión-->
-    <div
-      class="modal fade"
-      id="signin-modal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">
-              Iniciar Sesión
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form id="signin-form">
-              <div class="mb-3">
-                <label for="signin-email" class="form-label">Correo</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="ejemplo.com"
-                  id="signin-email"
-                />
-              </div>
-              <div class="mb-4">
-                <label for="signin-password" class="form-label"
-                  >Contraseña</label
-                >
-                <input
-                  type="password"
-                  class="form-control"
-                  id="signin-password"
-                />
-              </div>
-
-              <div>
-                <input
-                  type="submit"
-                  class="btn btn-primary"
-                  value="Iniciar Sesión"
-                />
-              </div>
-            </form>
-            <hr />
-            <div>
-              <button class="btn btn-info" id="google-btn">
-                <i class="bi bi-google"></i> Google
-              </button>
+        <div class="modal-body">
+          <form id="signin-form">
+            <div class="mb-3">
+              <label for="signin-email" class="form-label">Correo</label>
+              <input type="email" class="form-control" placeholder="ejemplo.com" id="signin-email" />
             </div>
+            <div class="mb-4">
+              <label for="signin-password" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="signin-password" />
+            </div>
+
+            <div>
+              <input type="submit" class="btn btn-primary" value="Iniciar Sesión" />
+            </div>
+          </form>
+          <hr />
+          <div>
+            <button class="btn btn-info" id="google-btn">
+              <i class="bi bi-google"></i> Google
+            </button>
+          </div>
+          <div>
+            <button class="btn" id="facebook-btn">
+              <i class="bi facebook"></i> facebook
+              <link rel="stylesheet" href=""https://www.facebook.com/tuusuario"">
+              <a href="https://www.tiktok.com/@ebizlatin?_t=ZM-8u5KyOr6gLd&_r=1" target="_blank">
+                <img src="img/WhatsApp Image 2025-02-20 at 6.04.55 PM.jpeg" alt="Ebiz en TikTok" style="width: 150px; height: auto;">
+            </a>
+            </button>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Modal Registrarse-->
-    <div
-      class="modal fade"
-      id="signup-modal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Registrarse</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form id="signup-form">
-              <div class="mb-3">
-                <label for="signup-name" class="form-label"
-                  >Nombre Completo</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Ingresa tu nombre"
-                  id="signup-name"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <label for="signup-email" class="form-label">Correo</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="ejemplo.com"
-                  id="signup-email"
-                  required
-                />
-              </div>
-              <div class="mb-4">
-                <label for="signup-password" class="form-label"
-                  >Contraseña</label
-                >
-                <input
-                  type="password"
-                  class="form-control"
-                  id="signup-password"
-                />
-              </div>
 
-              <div>
-                <input
-                  type="submit"
-                  class="btn btn-primary"
-                  value="Registrarse"
-                />
-              </div>
-            </form>
-          </div>
+
+
+  <!-- Modal Registrarse-->
+  <div class="modal fade" id="signup-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Registrarse</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="signup-form">
+            <div class="mb-3">
+              <label for="signup-name" class="form-label">Nombre Completo</label>
+              <input type="text" class="form-control" placeholder="Ingresa tu nombre" id="signup-name" required />
+            </div>
+            <div class="mb-3">
+              <label for="signup-email" class="form-label">Correo</label>
+              <input type="email" class="form-control" placeholder="ejemplo.com" id="signup-email" required />
+            </div>
+            <div class="mb-4">
+              <label for="signup-password" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="signup-password" />
+            </div>
+
+            <div>
+              <input type="submit" class="btn btn-primary" value="Registrarse" />
+            </div>
+          </form>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Bootstrap -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Toastify -->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/toastify-js"
-    ></script>
-    <nav class="btn">
-      <a href="indeex.html">principal</a>
-    </nav>
-  </body>
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- Toastify -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <nav class="btn">
+    <a href="indeex.html">principal</a>
+  </nav>
+</body>
+
 </html>
