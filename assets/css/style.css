@@ -1,6 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
+
+  font-family: "Roboto", serif;
+  line-height: 15px;
 }
 
 .opciones {
@@ -12,44 +17,61 @@
   margin: 20px;
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 10px;
 }
 
 .contenedor1,
 .contenedor2 {
+  margin: 20px;
   width: 50%;
 }
 
 #facturas-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 #historial-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .factura-container {
-  padding: 10px;
-  border: 1px solid #000;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
   border-radius: 10px;
+  box-shadow: 0px 0px 6px 2px rgba(171, 171, 171, 0.7);
 }
 
 .transacciones {
   padding: 10px;
-  border: 1px solid #000;
   border-radius: 10px;
+  box-shadow: 0px 0px 6px 2px rgba(171, 171, 171, 0.7);
 }
 
 /* Botones */
-.financiamiento,
+.financiamiento {
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 5px 7px;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  color: white;
+  background-color: rgb(6, 6, 79);
+}
+
 .opcion {
   border: 1px solid #000;
   border-radius: 10px;
   padding: 5px 7px;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
 }
 
 .opciones {

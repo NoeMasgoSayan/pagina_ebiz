@@ -20,9 +20,9 @@ export const setupFacturas = () => {
 
       facturasHtml += `
       <article class="factura-container"  data-id="${facturaId}">
-        <p>empresa: ${data.empresa}</p>
-        <p>factura #${data.numero}</p>
-        <p>monto ${data.monto}</p>
+        <p><strong>Factura #${data.numero}</strong></p>
+        <p><strong>Empresa:</strong> ${data.empresa}</p>
+        <p><strong>Monto:</strong> $${data.monto}</p>
         <button class="financiamiento" data-id="${facturaId}">Solicitar cotización</button>
           <div class="opciones">
             <h5>Opciones de financiamiento</h5>
