@@ -23,8 +23,12 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
     />
-    <!-- CSS Perfil -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- CSS facturas -->
+    <link rel="stylesheet" href="./assets/css/facturas.css" />
+    <!-- CSS informacion -->
+    <link rel="stylesheet" href="./assets/css/información.css" />
+    <!-- CSS inicio de sesion y registrase -->
+    <link rel="stylesheet" href="./assets/css/iniciarSesionRegistrarse.css" />
     <!-- JavaScript -->
     <script type="module" src="./assets/js/script.js"></script>
   </head>
@@ -44,6 +48,18 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sobre nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contáctanos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Proveedores</a>
+              </li>
+            </ul>
+
             <ul class="navbar-nav ms-auto">
               <li class="nav-item logged-out">
                 <a
@@ -73,7 +89,6 @@
     </header>
 
     <main id="main-container">
-      <!--<p id="saludo">Bienvenido noelia</p>-->
       <section class="contenedor1">
         <!-- Contenedor donde estas todas las facturas -->
         <h3>Facturas disponibles</h3>
@@ -92,45 +107,6 @@
               <button class="option">Banco C - 10% Interés</button>
             </div>
           </article>
-          <article class="factura-container">
-            <p>Empresa: qwer</p>
-            <p>Factura: 001</p>
-            <p>Monto: $1000</p>
-            <button id="financiamiento">Solicitar cotización</button>
-            <div class="opciones">
-              <h3>Opciones de financiamiento</h3>
-              <p>Selecciona una oferta:</p>
-              <button class="option">Banco A - 5% Interés</button>
-              <button class="option">Banco B - 6% Interés</button>
-              <button class="option">Banco C - 10% Interés</button>
-            </div>
-          </article>
-          <article class="factura-container">
-            <p>Empresa: qwer</p>
-            <p>Factura: 001</p>
-            <p>Monto: $1000</p>
-            <button id="financiamiento">Solicitar cotización</button>
-            <div class="opciones">
-              <h3>Opciones de financiamiento</h3>
-              <p>Selecciona una oferta:</p>
-              <button class="option">Banco A - 5% Interés</button>
-              <button class="option">Banco B - 6% Interés</button>
-              <button class="option">Banco C - 10% Interés</button>
-            </div>
-          </article>
-          <article class="factura-container">
-            <p>Empresa: qwer</p>
-            <p>Factura: 001</p>
-            <p>Monto: $1000</p>
-            <button id="financiamiento">Solicitar cotización</button>
-            <div class="opciones">
-              <h3>Opciones de financiamiento</h3>
-              <p>Selecciona una oferta:</p>
-              <button class="option">Banco A - 5% Interés</button>
-              <button class="option">Banco B - 6% Interés</button>
-              <button class="option">Banco C - 10% Interés</button>
-            </div>
-          </article>
         </div>
       </section>
       <section class="contenedor2">
@@ -139,12 +115,6 @@
         <div id="historial-container">
           <!-- Contenedor de cada factura -->
           <!--
-          <article class="transacciones">
-            <p>Factura #001 aprobada por Banco A</p>
-          </article>
-          <article class="transacciones">
-            <p>Factura #001 aprobada por Banco A</p>
-          </article>
           <article class="transacciones">
             <p>Factura #001 aprobada por Banco A</p>
           </article>
@@ -292,8 +262,5 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/toastify-js"
     ></script>
-    <nav class="btn">
-      <a href="indeex.html">principal</a>
-    </nav>
   </body>
 </html>

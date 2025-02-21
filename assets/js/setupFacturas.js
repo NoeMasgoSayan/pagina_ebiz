@@ -27,9 +27,9 @@ export const setupFacturas = () => {
           <div class="opciones">
             <h5>Opciones de financiamiento</h5>
             <p>Selecciona una oferta:</p>
-            <button class="opcion" data-id="${facturaId}" data-opcion="A">Banco A - 5% Interés</button>
-            <button class="opcion" data-id="${facturaId}" data-opcion="B">Banco B - 6% Interés</button>
-            <button class="opcion" data-id="${facturaId}" data-opcion="C">Banco C - 10% Interés</button>
+            <button class="opcion" data-id="${facturaId}" data-opcion="A">Banco A - 5% descuento</button>
+            <button class="opcion" data-id="${facturaId}" data-opcion="B">Banco B - 6% descuento</button>
+            <button class="opcion" data-id="${facturaId}" data-opcion="C">Banco C - 10% descuento</button>
           </div>
       </article>
       `;
@@ -76,11 +76,29 @@ export const setupFacturas = () => {
             (factura) => factura.id === optionId
           );
           if (facturaSeleccionada) {
+            const descuento = {
+              A: 0.05,
+              B: 0.06,
+              C: 0.1,
+            };
+            // Calcular el monto con descuento
+            const porcentajeDescuento = descuento[btn.dataset.opcion];
+            const montoConDescuento =
+              facturaSeleccionada.data.monto * (1 - porcentajeDescuento);
+
+            // Mostrar el monto con descuento
+            const montoHtml = document.querySelector(
+              `.monto-descuento[data-id="${optionId}"]`
+            );
+            if (montoHtml) {
+              montoHtml.innerText = `$${montoConDescuento}`;
+            }
+
             // Agregar la factura al historial
             let historialHtml = "";
             historialHtml += `
             <article class="transacciones">
-              <p>Factura #${facturaSeleccionada.data.numero} aprobada por banco ${btn.dataset.opcion}</p>
+              <p>Factura #${facturaSeleccionada.data.numero} aprobada por banco ${btn.dataset.opcion} con descuento. Monto: $${montoConDescuento}</p>
             </article>
             `;
             historialContainer.innerHTML += historialHtml;
